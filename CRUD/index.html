@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2 class="header-title">STUDENT LIST</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                <button id="searchButton">Search name</button>
+            </div>
+        </div>
+
+        <ul id="list-students"></ul>
+        <div class="button-container">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Create</button>
+            <div class="sort-container">
+                <label>Sắp xếp theo:</label>
+                <select id="sort" onchange="handleSortChange()">
+                    <option value="name">Tên</option>
+                    <option value="class">Lớp</option>
+                    <option value="score">Điểm</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Create Student</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Class</label>
+                            <input type="text" id="class" name="class" class="form-control" placeholder="Enter class">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" id="address" name="address" class="form-control"
+                                placeholder="Enter address">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Score</label>
+                            <input type="number" id="score" name="score" class="form-control" placeholder="Enter score">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Image</label>
+                            <input type="file" id="img" name="img" class="form-control" accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btn-create">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="updateModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Student</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" id="update-name" name="update-name" class="form-control"
+                                placeholder="Enter name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Class</label>
+                            <input type="text" id="update-class" name="update-class" class="form-control"
+                                placeholder="Enter class">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" id="update-address" name="update-address" class="form-control"
+                                placeholder="Enter address">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Score</label>
+                            <input type="number" id="update-score" name="update-score" class="form-control"
+                                placeholder="Enter score">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Image</label>
+                            <input type="file" id="update-img" name="update-img" class="form-control" accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btn-update">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

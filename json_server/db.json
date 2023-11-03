@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "name": "Phan Minh Duc",
+      "class": "12C6",
+      "address": "Nha Trang - VN",
+      "img": "1.jpg",
+      "id": 4,
+      "score": "10"
+    },
+    {
+      "name": "Huong Tran Thi",
+      "class": "10C9",
+      "address": "Da Nang - VN",
+      "img": "2.jpg",
+      "id": 5,
+      "score": 9
+    },
+    {
+      "name": "Bao Chuan",
+      "class": "12C6",
+      "address": "Quang Ninh - VN",
+      "img": "4.jpg",
+      "id": 6,
+      "score": 7
+    },
+    {
+      "name": "Lai Le Van",
+      "class": "10A9",
+      "address": "Nha Trang - VN",
+      "img": "5.jpg",
+      "id": 7,
+      "score": 8
+    },
+    {
+      "name": "Hai Tran Van",
+      "class": "11A6",
+      "address": "New York - USA",
+      "score": "5",
+      "img": "3.jpg",
+      "id": 8
+    }
+  ]
+}

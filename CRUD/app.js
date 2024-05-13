@@ -9,7 +9,7 @@ function start() {
 
 start();
 
-// Function
+
 function getStudents(callback) {
   fetch(studentApi)
     .then(function (response) {
@@ -17,7 +17,6 @@ function getStudents(callback) {
     })
     .then(callback);
 }
-
 
 // Tạo student
 function createStudent(data, callback) {
@@ -34,7 +33,6 @@ function createStudent(data, callback) {
     })
     .then(callback);
 }
-
 
 // Xóa
 function handleDeleteStudent(id) {
@@ -56,12 +54,11 @@ function handleDeleteStudent(id) {
     });
 }
 
-
 // Render ra danh sách Student
 function renderStudents(students) {
   var listStudentsBlock = document.querySelector("#list-students");
 
-  var html = students.map(function (student) {
+  var html = students.map(student => {
     return `
             <li class="student-item-${student.id}">
                 <p>Name : <b>${student.name}</b></p>
@@ -76,12 +73,10 @@ function renderStudents(students) {
                 </button>
                 
             </li>
-            
         `;
   });
   listStudentsBlock.innerHTML = html.join("");
 }
-
 
 // Xử lý tạo form
 function handleCreateForm() {
@@ -97,7 +92,6 @@ function handleCreateForm() {
 
     if (imgFile) {
       var imgName = imgFile.name; // Lấy tên tệp
-      var imgPath = URL.createObjectURL(imgFile); // Lấy đường dẫn tệp
 
       var formData = {
         name: name,
@@ -115,7 +109,6 @@ function handleCreateForm() {
     }
   };
 }
-
 
 // Chỉnh sửa
 function handleEditStudent(id) {
@@ -137,7 +130,7 @@ function handleEditStudent(id) {
       name: document.querySelector("#update-name").value,
       class: document.querySelector("#update-class").value,
       address: document.querySelector("#update-address").value,
-      score: document.querySelector("#update-score").value
+      score: document.querySelector("#update-score").value,
     };
 
     var imgInput = document.querySelector('input[name="update-img"]');
@@ -165,7 +158,6 @@ function handleEditStudent(id) {
   };
 }
 
-
 // Tìm kiếm
 function handleSearchCourse() {
   var searchInput = document.querySelector("#searchInput");
@@ -174,9 +166,7 @@ function handleSearchCourse() {
     var searchKeyword = searchInput.value.toLowerCase();
     getStudents(function (students) {
       var filteredStudents = students.filter(function (student) {
-        return (
-          student.name.toLowerCase().includes(searchKeyword)
-        );
+        return student.name.toLowerCase().includes(searchKeyword);
       });
       renderStudents(filteredStudents);
     });

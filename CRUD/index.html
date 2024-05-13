@@ -18,7 +18,7 @@
         <div class="header">
             <h2 class="header-title">STUDENT LIST</h2>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Tìm kiếm...">
+                <input type="text" id="searchInput" placeholder="Search...">
                 <button id="searchButton">Search name</button>
             </div>
         </div>
@@ -27,11 +27,11 @@
         <div class="button-container">
             <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Create</button>
             <div class="sort-container">
-                <label>Sắp xếp theo:</label>
+                <label>Sort by</label>
                 <select id="sort" onchange="handleSortChange()">
-                    <option value="name">Tên</option>
-                    <option value="class">Lớp</option>
-                    <option value="score">Điểm</option>
+                    <option value="name">Name</option>
+                    <option value="class">Class</option>
+                    <option value="score">Score</option>
                 </select>
             </div>
         </div>
@@ -122,6 +122,7 @@
         </div>
     </div>
 
+    
 
 
 

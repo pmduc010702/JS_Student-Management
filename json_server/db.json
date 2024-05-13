@@ -1,44 +1,44 @@
 {
   "students": [
     {
-      "name": "Phan Minh Duc",
-      "class": "12C6",
-      "address": "Nha Trang - VN",
+      "name": "An Tran Van",
+      "class": "A9",
+      "address": "Da Nang - VietNam",
+      "score": "6",
       "img": "1.jpg",
-      "id": 4,
-      "score": "10"
+      "id": 1
+    },
+    {
+      "name": "Duc Phan Minh",
+      "class": "B2",
+      "address": "Nha Trang - VietNam",
+      "score": "10",
+      "img": "2.jpg",
+      "id": 2
     },
     {
       "name": "Huong Tran Thi",
-      "class": "10C9",
-      "address": "Da Nang - VN",
-      "img": "2.jpg",
-      "id": 5,
-      "score": 9
-    },
-    {
-      "name": "Bao Chuan",
-      "class": "12C6",
-      "address": "Quang Ninh - VN",
-      "img": "4.jpg",
-      "id": 6,
-      "score": 7
-    },
-    {
-      "name": "Lai Le Van",
-      "class": "10A9",
-      "address": "Nha Trang - VN",
-      "img": "5.jpg",
-      "id": 7,
-      "score": 8
-    },
-    {
-      "name": "Hai Tran Van",
-      "class": "11A6",
-      "address": "New York - USA",
-      "score": "5",
+      "class": "C2",
+      "address": "London - England",
+      "score": "8",
       "img": "3.jpg",
-      "id": 8
+      "id": 3
+    },
+    {
+      "name": "Ha Nguyen Thi",
+      "class": "B2",
+      "address": "",
+      "score": "4",
+      "img": "5.jpg",
+      "id": 4
+    },
+    {
+      "name": "Luyen Le Van",
+      "class": "C1",
+      "address": "London - England",
+      "score": "3",
+      "img": "4.jpg",
+      "id": 5
     }
   ]
 }
